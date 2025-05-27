@@ -1,0 +1,31 @@
+start
+
+new i number
+set i 1
+new j number
+set j 1
+
+new result number
+new temp number
+new counter number
+
+loop outLoop (10 > i)
+
+    loop inLoop (10 > j)
+        set result 0
+        set counter i
+        
+        loop multiplyLoop (counter > 0)
+            set result result + j
+            set counter counter - 1
+        end multiplyLoop
+        log string i >> " * " >> j >> " = " >> result
+
+        set j j + 1
+    end inLoop
+    set j 1
+
+    set i i + 1
+end outLoop
+
+finish
